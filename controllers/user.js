@@ -53,7 +53,7 @@ export const getUserDetails = (req,res)=>{
 };
 
 export const logout= (req, res)=>{
-    try {
+    try {        
         res.status(200).cookie("token","",{
             expires:new Date(Date.now()),
             sameSite: process.env.NODE_ENV === "Development" ? "lax" :  "none",
